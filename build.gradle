@@ -52,3 +52,7 @@ easyDepend {
         }
     }
 }
+
+task print {
+    println easyDepend.dependenciesPairs.appcompat.dep
+}

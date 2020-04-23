@@ -46,9 +46,17 @@ public class DependenciesNameValuePair {
         return versionCode;
     }
 
+    public String getDep() {
+        return aliasName + ":" + versionCode;
+    }
+
     @Nonnull
     @Override
     public String toString() {
-        return aliasName + ":" + versionCode;
+        return "DependenciesNameValuePair{" +
+                "name='" + name + '\'' +
+                ", aliasName='" + aliasName + '\'' +
+                ", versionCode='" + versionCode + '\'' +
+                '}';
     }
 }
