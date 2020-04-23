@@ -3,9 +3,9 @@ apply plugin: 'com.jfrog.bintray'
 // This is the library version used when deploying the artifact
 version = "1.0.0"
 
-def siteUrl = 'https://github.com/RyanHuen/RockAndroidDemo'      // 项目的主页
-def gitUrl = 'https://github.com/RyanHuen/RockAndroidDemo.git'   // Git仓库的url
-group = "com.muxi.dependency"                                        // Maven Group ID for the artifact，一般填你唯一的包名
+def siteUrl = 'https://github.com/RyanHuen/EasyDependencies'      // 项目的主页
+def gitUrl = 'https://github.com/RyanHuen/EasyDependencies.git'   // Git仓库的url
+group "com.ryanhuen.easy_dependencies"
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
@@ -54,16 +54,10 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "RyanHuen"
-        name = "Dependency"	//发布到JCenter上的项目名字
+        name = "easy_dependencies"	//发布到JCenter上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
     }
 }
-javadoc { //jav doc采用utf-8编码否则会报“GBK的不可映射字符”错误
-    options{
-        encoding "UTF-8"
-        charSet 'UTF-8'
-    }
-}    
