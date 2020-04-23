@@ -1,0 +1,2 @@
+# EasyDependencies
+轻便快捷的管理全工程所有Module依赖关系、Version的Gradle插件库
