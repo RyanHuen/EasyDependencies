@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-apply plugin: 'easy_dependencies'
+apply plugin: com.ryanhuen.dependency.EasyDependenciesPlugin
 buildscript {
 
     repositories {
@@ -34,8 +34,8 @@ task clean(type: Delete) {
 }
 
 ext {
-    release_jcenter = true
-    release_local = false
+    release_jcenter = false
+    release_local = true
 }
 
 easyDepend {
