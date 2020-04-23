@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-apply plugin: com.ryanhuen.dependency.EasyDependenciesPlugin
+apply plugin: "easy_dependencies"
 buildscript {
-
+//
     repositories {
         google()
         jcenter()
@@ -13,7 +13,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.6.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.0'
+        classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.0.0.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -38,21 +38,35 @@ ext {
     release_local = true
 }
 
-easyDepend {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
-    minSdkVersion 23
-    targetSdkVersion 29
+//easyDepend {
+//    compileSdkVersion 29
+//    buildToolsVersion "29.0.2"
+//    minSdkVersion 23
+//    targetSdkVersion 29
+//
+//}
+easyDep {
 
-    dependenciesPairs {
-
-        appcompat {
-            aliasName = 'androidx.appcompat:appcompat'
-            versionCode = '1.1.0'
+    dependenciesGroups {
+        androidx {
+            nodes {
+                appcompat {
+                    alias = 'androidx.appcompat:appcompat'
+                    version = '1.1.0'
+                }
+                constraintlayout {
+                    alias = 'androidx.constraintlayout:constraintlayout'
+                    version = '1.1.3'
+                }
+            }
         }
     }
 }
 
 task print {
-    println easyDepend.dependenciesPairs.appcompat.dep
+    println easyDep.dependenciesGroups.androidx
+    println easyDep.dependenciesGroups.androidx.name
+    println easyDep.dependenciesGroups.androidx.nodes.appcompat
+    println easyDep.dependenciesGroups.androidx.nodes.appcompat.alias
+    println easyDep.dependenciesGroups.androidx.nodes.appcompat.version
 }

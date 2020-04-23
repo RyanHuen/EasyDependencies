@@ -1,7 +1,7 @@
 apply plugin: 'maven'
 
 //publish to local directory
-def versionName = "1.0.0"
+def versionName = "1.0.0.0.2"
 group "com.ryanhuen.easy_dependencies"
 version versionName
 
