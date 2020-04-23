@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+if (rootProject.release_jcenter) {
+    apply from: 'jcenter.gradle'
+}
+if (rootProject.release_local) {
+    apply from: 'maven.gradle'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}

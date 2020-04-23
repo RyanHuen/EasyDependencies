@@ -1,0 +1,3 @@
+rootProject.name='EasyDependencies'
+include ':app'
+include ':easydependencies'
