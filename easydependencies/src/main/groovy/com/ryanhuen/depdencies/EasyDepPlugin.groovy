@@ -19,7 +19,7 @@ class EasyDepPlugin implements Plugin<Project> {
             nodes = project.container(DependenciesNode)
         }
         DependenciesExtension dependenciesExtension = project.container(DependenciesExtension)
-        dependenciesExtension.dependenciesGroups = groups
+        dependenciesExtension.groups = groups
         project.extensions.add("easyDep", dependenciesExtension)
     }
 }

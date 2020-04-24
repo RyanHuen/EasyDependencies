@@ -10,9 +10,25 @@ class DependenciesExtension {
     int targetSdkVersion;
     String buildToolsVersion;
 
-    NamedDomainObjectContainer<DependenciesGroup> dependenciesGroups;
+    NamedDomainObjectContainer<DependenciesGroup> groups;
 
-    def dependenciesGroups(final Closure configureClosure) {
-        dependenciesGroups.configure(configureClosure)
+    def groups(final Closure configureClosure) {
+        groups.configure(configureClosure)
+    }
+
+    void compileSdkVersion(int compileSdkVersion) {
+        this.compileSdkVersion = compileSdkVersion;
+    }
+
+    void minSdkVersion(int minSdkVersion) {
+        this.minSdkVersion = minSdkVersion
+    }
+
+    void targetSdkVersion(int targetSdkVersion) {
+        this.targetSdkVersion = targetSdkVersion
+    }
+
+    void buildToolsVersion(String buildToolsVersion) {
+        this.buildToolsVersion = buildToolsVersion
     }
 }
