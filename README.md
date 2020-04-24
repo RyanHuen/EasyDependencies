@@ -6,7 +6,9 @@
 ### 声明
 - 首先在根目录build.gradle中声明插件
 
-> classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.3'
+```
+classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.3'
+```
 
 ### 添加依赖
 - 插件已经上传jcenter，直接引用就好
@@ -25,8 +27,10 @@ buildscript {
 - 工程中根目录创建dependencies.gradle文件（这一步可省略）
 - sync工程完毕后，在根目录build.gradle引用该插件，在build.gradle文件中头部插入以下代码
 
-> apply plugin: 'easy_dependencies'
-> apply from: "./dependency/dependencies.gradle"  //dependencies.gradle创建在哪里就指向该路径
+```
+apply plugin: 'easy_dependencies'
+apply from: "./dependency/dependencies.gradle"  //dependencies.gradle创建在哪里就指向该路径
+```
 
 ### 配置dependencies
 - 此时插件已经引用上，接下来就是配置dependencies.gradle中的依赖了
