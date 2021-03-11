@@ -51,6 +51,10 @@ easyDep {
     minSdkVersion 23
     targetSdkVersion 29
     buildToolsVersion "29.0.2"
+    versionPair = [
+            "a": "b",
+            "c": "d"
+    ]
 
     groups {
         androidx {
@@ -75,4 +79,6 @@ task print {
     println easyDep.groups.androidx.nodes.appcompat.alias
     println easyDep.groups.androidx.nodes.appcompat.version
     println easyDep.groups.androidx.nodes.appcompat.dep
+    println easyDep.versionPair.a
+    println easyDep.versionPair.c
 }

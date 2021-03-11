@@ -9,6 +9,7 @@ class DependenciesExtension {
     int minSdkVersion;
     int targetSdkVersion;
     String buildToolsVersion;
+    Map<String, String> versionPair;
 
     NamedDomainObjectContainer<DependenciesGroup> groups;
 
@@ -30,5 +31,9 @@ class DependenciesExtension {
 
     void buildToolsVersion(String buildToolsVersion) {
         this.buildToolsVersion = buildToolsVersion
+    }
+
+    void versionPair(Map<String, String> versionPair) {
+        this.versionPair = versionPair
     }
 }
