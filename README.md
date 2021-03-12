@@ -7,7 +7,7 @@
 - 首先在根目录build.gradle中声明插件
 
 ```
-classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.3'
+classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.4'
 ```
 
 ### 添加依赖
@@ -17,7 +17,7 @@ classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.3'
 ```
 buildscript {
     dependencies {
-        classpath classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.3'
+        classpath classpath 'com.ryanhuen.easy_dependencies:easydependencies:1.0.4'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
