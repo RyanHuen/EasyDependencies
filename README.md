@@ -40,17 +40,21 @@ easyDep {
     buildToolsVersion "29.0.2"
     minSdkVersion 23
     targetSdkVersion 29
+    versionPair = [
+            kotlin_version        : "1.4.10",
+            jetpack_version       : "1.1.0",
+    ]
 
     groups {
         androidx {
             nodes {
                 appcompat {
                     alias 'androidx.appcompat:appcompat'
-                    version '1.1.0'
+                    version versionPair.jetpack_version
                 }
                 constraintlayout {
                     alias 'androidx.constraintlayout:constraintlayout'
-                    version '1.1.3'
+                    version versionPair.jetpack_version
                 }
             }
         }
